@@ -1,0 +1,14 @@
+npm init -y
+npm install
+npm i express
+npm i body-parser
+npm install -g nodemon
+
+npm install sequelize sequelize-cli mysql2
+npx sequelize-cli init
+
+npx sequelize-cli model:generate --name Student --attributes name:string,email:string
+
+npx sequelize-cli db:migrate
+
+npx sequelize-cli migration:generate --name add-descriptions-in-products-table
